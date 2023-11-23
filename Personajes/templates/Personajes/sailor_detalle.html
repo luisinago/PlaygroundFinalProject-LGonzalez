@@ -1,0 +1,29 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Sailor Moon{% endblock titulo %}
+
+{% block cambia %}
+
+<main class="px-3">
+    <h1>Sailor Senji {{sailor.nombre}}</h1>
+    <h5 align="center">Nombre:</h5>
+    <p class="lead">{{sailor.nombre}}</p>
+    <br>
+
+    <h5 align="center">Planeta:</h5>
+    <p class="lead">{{sailor.planeta}}</p>
+    <br>
+
+    <h5 align="center">Objeto:</h5>
+    <p class="lead">{{sailor.objeto}}</p>
+    <br>
+
+    {% block importante %}
+    <a href="{% url 'ListaSailor' %}" class="btn btn-lg fw-bold text-white" style="background-color:rgb(88,21,28)"><i class="bi-arrow-left-short"></i></a>
+    {% endblock importante %}
+    <br><br><br> 
+</main>
+
+{% endblock cambia %}

@@ -1,0 +1,22 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Crear Witch{% endblock titulo %}
+
+{% block cambia %}
+
+<main class="px-3">
+    <p class= 'lead' align= 'center'>
+      <form action="" method="POST" >
+        {% csrf_token %}
+        {{form.as_p}} 
+        <br><input type = "submit" value= "Crear" class="btn btn-lg fw-bold text-white" style="background-color:rgb(88,21,28)">
+      </form>
+      <a href="{% url 'ListaWitch' %}" class="btn btn-lg fw-bold text-text-danger-emphasis" style="background-color:white"><i class="bi-arrow-left-short"></i></a>  
+    </p>
+        <br><br><br>
+    
+  </main>
+
+{% endblock cambia %}

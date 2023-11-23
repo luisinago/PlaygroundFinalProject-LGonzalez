@@ -1,0 +1,31 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Registro{% endblock titulo %}
+
+{% block cambia %}
+
+
+
+<main class="px-3">
+    <h1>Regístrate</h1>
+    <br>
+    {% block importante %}
+    <p class= 'lead' align= 'center'>
+        <h5>IMPORTANTE:</h5>
+        <p>La CONTRASEÑA no puede ser enteramente numérica y debe tener al menos 8 caracteres de largo</p>
+    </p>
+<br>
+    {% endblock importante %}
+    <p class= 'lead' align= 'center'>
+        <form action='' method='POST'>
+            {% csrf_token %}
+            {{form.as_p}} 
+            <br><button type = "submit" class="btn btn-lg fw-bold  text-white" style="background-color:rgb(88,21,28)">Registrar</button>
+        </form>
+    </p>
+</main>
+
+
+{% endblock cambia %}

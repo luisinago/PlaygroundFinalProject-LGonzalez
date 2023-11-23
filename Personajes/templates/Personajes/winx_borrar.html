@@ -1,0 +1,23 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Borrar Winx{% endblock titulo %}
+
+{% block cambia %}
+
+<main class="px-3">
+    <p class= 'lead' align= 'center'>
+      <form action="" method="POST" >
+        {% comment %} Token Django {% endcomment %}
+        {% csrf_token %}
+        ¿Estás seguro que deseas borrar la {{winx.categoria}} llamada {{winx.nombre}} 
+        <br><input type = "submit" value= "Eliminar" class="btn btn-lg fw-bold  text-white" style="background-color:rgb(88,21,28)">
+      </form> 
+      <a href="{% url 'ListaWinx' %}" class="btn btn-lg text-danger-emphasis fw-semibold" style="background-color:white">Cancelar</a> 
+    </p>
+        <br><br><br>
+    
+  </main>
+
+{% endblock cambia %}

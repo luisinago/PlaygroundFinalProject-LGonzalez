@@ -1,0 +1,20 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Logout{% endblock titulo %}
+
+{% block cambia %}
+
+
+
+<main class="px-3">
+    <h1>¡Adiós!</h1>
+    <br>
+    {% block importante %}
+    <h5 class= 'lead' align= 'center'>Te haz deslogueado.</h5>
+    {% endblock importante %}
+ </main>
+
+
+{% endblock cambia %}

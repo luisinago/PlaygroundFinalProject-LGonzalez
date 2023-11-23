@@ -1,0 +1,37 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Winx{% endblock titulo %}
+
+{% block cambia %}
+<main class="px-3">
+  <h1>Club Winx</h1>
+  <p class="lead"><br>Aquí podrás crear tu Winx o buscar alguna ya creada        
+    <br>Para que quede en nuestra base de datos deberás completar los campos de nombre, tipo de hada y transformación.
+    {% block importante %}
+    <h5>Recordá poner siempre "winx" en el campo categoría</h5>
+    {% endblock importante %}
+    <br><br>
+  
+  <a href="{% url 'NuevaWinx' %}" class="btn btn-lg fw-bold text-white" style="background-color:rgb(88,21,28)">Nueva Winx</a>
+<br>
+<br>
+<br>
+  <h3>Hadas creadas</h3>
+  {% if winx %}
+    {% for hada in winx %}
+    <li>
+      <h5>{{hada.nombre}}</h5>
+      <p>
+        <a href="{% url 'DetalleWinx' hada.pk %}" class="btn text-danger-emphasis fw-semibold" style="background-color:#ffffff"><i class="bi-eye-fill"></i></a>
+        <a href="{% url 'EditarWinx' hada.pk %}" class="btn text-danger-emphasis fw-semibold" style="background-color:#ffffff"><i class="bi-pencil-fill"></i></a>
+        <a href="{% url 'BorrarWinx' hada.pk %}" class="btn text-danger-emphasis fw-semibold" style="background-color:#ffffff"><i class="bi-trash-fill"></i></a>
+      </p>
+    </li>
+    {% endfor %}
+  {% endif %}
+    <br><br><br>
+</main>
+{% endblock cambia %}
+

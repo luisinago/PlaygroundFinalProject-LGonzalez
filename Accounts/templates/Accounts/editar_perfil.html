@@ -1,0 +1,46 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Logout{% endblock titulo %}
+
+{% block cambia %}
+<main class="px-3">
+    <h1>Editar perfil de {{usuario}}</h1>
+    <br>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table align="center">
+            {{ miFormulario }}
+        </table>
+
+        <br><input type = "submit" value= "Enviar" class="btn btn-lg fw-bold text-white" style="background-color:rgb(88,21,28)">
+    </form> 
+        <a href="{% url 'CambiarContrasenia' %}" class="btn btn-lg text-danger-emphasis fw-semibold" style="background-color:white">Cambiar contraseña</a> 
+
+        {% block importante %}
+    
+    {% endblock importante %}
+ </main>
+
+
+{% endblock cambia %}
+
+    {% comment %} <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Formulario - Editar Perfil</h1>
+    <h1>De {{usuario}}</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- Acá está la magia de Django-->
+        <table>
+            {{ miFormulario }}
+        </table>
+
+        <input type="submit", value="Enviar">
+    </form> 
+    <br> 
+    <button type='button'>
+        <a class="navbar-brand" href="{% url 'CambiarContrasenia' %}">Cambiar contrasenia</a>
+    </button>
+{% endblock %} {% endcomment %}
+

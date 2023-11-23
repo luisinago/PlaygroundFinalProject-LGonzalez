@@ -1,0 +1,25 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Login{% endblock titulo %}
+
+{% block cambia %}
+
+<main class="px-3">
+    <h1>Iniciar Sesión</h1>
+    <p class= 'lead' align= 'center'>
+        <form action='' method='POST'>
+            {% csrf_token %}
+            {{form.as_p}} 
+            <br><button type = "submit" class="btn btn-lg fw-bold  text-white" style="background-color:rgb(88,21,28)">Iniciar Sesion</button>
+        </form>
+    </p>
+</main>
+
+    {% block importante %}
+
+    {% endblock importante %}
+
+
+{% endblock cambia %}

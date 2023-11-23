@@ -1,0 +1,26 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Cambiar contraseña{% endblock titulo %}
+
+{% block cambia %}
+<main class="px-3">
+    <h5>¿Desea cambiar su contraseña?</h5>
+    <br>
+    <form action='' method="POST">
+        {% csrf_token %}
+        <table>
+            {{form}}
+        </table>
+        <button class="btn btn-lg fw-bold text-white" style="background-color:rgb(88,21,28)">Cambiar</button>
+    </form>
+    
+    {% block importante %}
+    
+    {% endblock importante %}
+ </main>
+
+
+{% endblock cambia %}
+

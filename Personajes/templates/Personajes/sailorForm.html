@@ -1,0 +1,36 @@
+{% extends 'Home/index.html'%}
+
+{% load static %}
+
+{% block titulo %}Sailor Moon{% endblock titulo %}
+
+{% block cambia %}
+
+<main class="px-3">
+    <h1>Sailor Moon</h1>
+    <p class="lead"><br>Aquí podrás crear tu Sailor Senshi.        
+    <br>Para que quede en nuestra base de datos deberás completar los campos de categoría, nombre, palneta y accesorio.
+    {% block importante %}
+    <h5>Recordá poner siempre "sailor" en el campo categoría</h5>
+    {% endblock importante %}
+    </p>
+    <br>
+    <p>
+        {% if sailorFormulario.errors %}
+        <p style= "color:rgb(88,21,28)"> Hay algo mal en los datos, por favor revisar.</p>
+        {% endif %}
+      <form action="" method="POST" >
+        {% comment %} Token Django {% endcomment %}
+        {% csrf_token %}
+        <table align="center">
+          {{sailorFormulario.as_table}}
+        </table>
+          <br><br><input type = "submit" value= "Crear" class="btn btn-lg btn-light fw-bold border-white text-white" style="background-color:rgb(88,21,28)">
+        
+      </form>  
+      </p>
+        <br><br><br>
+    
+  </main>
+
+{% endblock cambia %}
