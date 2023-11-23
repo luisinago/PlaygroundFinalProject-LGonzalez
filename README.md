@@ -5,6 +5,7 @@ Este es mi proyecto final o "Playground" del curso Python Flex de Coderhouse 202
 https://drive.google.com/file/d/1HIK2L27kYCIUk9ILOhMsSBf0gUMnw8o7/view?usp=sharing
 
 <h3>Casos de Prueba</h3>
+https://docs.google.com/spreadsheets/d/1aZvQw1N6iWEQSgme9v2xEPQQ-_i7LM9tTHmgKzo8qoY/edit?usp=sharing
 
 ## Instrucciones
 Para el correcto funcionamiento de este proyecto, tras clonar el repositorio desde aquí, es recomendable seguir los siguientes pasos:
