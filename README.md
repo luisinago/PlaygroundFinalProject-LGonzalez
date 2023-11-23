@@ -17,7 +17,8 @@ Para el correcto funcionamiento de este proyecto, tras clonar el repositorio des
 3) Una vez tengas todo instalado, desde la terminal escribe: <i>python manage.py runserver</i> para correr el servidor (la página)
 
 ## Funcionalidades
-La idea de la página es poder crear Magical Girls. Para ello se debe elegir un show en el menú superior (las opciones son: W.I.T.C.H, Winx y Sailor Moon).
+Al entrar a la página te encontrarás con un "Sobre Mi", el cual está predeterminado como pantalla de inicio. También se puede acceder aquí desde el menú superior y desde el "logo" en la esquina superior izquierda.
+La idea principal de la página es poder crear Magical Girls. Para ello se debe elegir un show en el menú superior (las opciones son: W.I.T.C.H, Winx y Sailor Moon).
 Cada una de estas páginas mostrará una lista de personajes creados y debajo opciones para ver detalle, borrar o eliminar.
 
 #### Funcionalidades restringidas
